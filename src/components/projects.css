@@ -1,0 +1,70 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .project-box {
+    /* border: 2px solid; */
+  
+    height: auto;
+    width: auto;
+  }
+  .project-complete-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .project-individual-box {
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    margin: 15px;
+    width: 270px;
+    padding-bottom: 15px;
+    border: 2px solid;
+  }
+  .project-image-box {
+    height: 220px;
+    width: 267px;
+  }
+  .project-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 13px;
+  }
+  .project-content-box {
+  }
+  .project-description {
+  }
+  .project-languages {
+    text-shadow: 1px 1px rgb(6, 181, 215);
+  }
+  .project-buttons-box {
+  }
+  @media screen and (max-width: 480px) {
+    .project-box {
+    }
+    .project-complete-box {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 8px;
+    }
+    .project-image-box {
+    }
+    .project-image {
+      height: 100%;
+      width: 100%;
+      border-radius: 13px;
+    }
+    .project-content-box {
+    }
+    .project-description {
+    }
+    .project-languages {
+    }
+    .project-buttons-box {
+    }
+  }
+  

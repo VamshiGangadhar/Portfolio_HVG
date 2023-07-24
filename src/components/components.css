@@ -1,0 +1,235 @@
+.aboutme {
+    color: #f5f5f5;
+    margin: 30px 300px;
+    color: grey;
+    font-size: 22px;
+  }
+  .dev {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .experience-box{
+    display: flex;
+    height: 255px;
+    width: 80%;
+    background-color: #343434;
+    /* padding-top: 20px; */
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+  }
+
+  .experience-content-box{
+      padding-top: 50px;
+      text-align: left;
+      padding-top: 60px;
+      /* background-color: aliceblue; */
+  }
+
+  .experience-section {
+    color: white;
+  }
+
+  .experience-image{
+    height: 166px;
+    width: 143px;
+    margin: 45px;
+    border-radius: 50px;
+    /* padding-inline: 58px; */
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+  }
+
+  .hero {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    background-color: #1b1a17;
+    text-align: justify;
+    align-items: center;
+  }
+  
+  .heroLeft {
+    width: 50%;
+  }
+  
+  .heroRight {
+    padding-left: 50px;
+    padding-right: 30px;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+  }
+  
+  .hero-image {
+    margin-left: 100px;
+    height: 500px;
+    width: 505px;
+    border-radius: 50%;
+    border: 2px solid lightgreen;
+  }
+  
+  .hero-image:hover {
+    border: 2px solid #f5f5f5;
+  }
+  .exp-img {
+    border-radius: 15px;
+  }
+  .legend {
+    text-align: center;
+    font-size: 25px;
+    color: lightgoldenrodyellow;
+  }
+  
+  .logo {
+    height: 50px;
+    width: 48px;
+    border-radius: 50%;
+  }
+  
+  .name {
+    color: lightgoldenrodyellow;
+  }
+  
+  /* project-slot */
+  .project-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .project-image {
+    height: 230px;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  .projects-individual-box {
+    border: 1px solid #f5f5f5;
+  }
+  
+  .projects-section {
+    height: auto;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
+  }
+  
+  .socialicons {
+    color: #f5f5f5;
+    height: 35px;
+    width: 35px;
+  }
+  
+  .skillbox {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .skillhead {
+    color: lightgoldenrodyellow;
+  }
+  
+  .skillIcon {
+    height: 105px;
+    margin-right: 5px;
+  }
+  
+  .subname {
+    color: lightgrey;
+  }
+  
+  /* contact us form */
+  
+  .form-label {
+    color: white;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .form-table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  .Whole_aboutme{
+    padding: 20px;
+    padding-inline: 20px;
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .aboutme {
+      margin: 20px;
+      font-size: 16px;
+    }
+    .experience-box{
+      display: flex;
+      flex-direction: column;
+      /* height: 255px; */
+      height: auto;
+      width: 80%;
+      background-color: #343434;
+      /* padding-left: 10%; */
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50px;
+      
+    }
+    .experience-image{
+      height: 166px;
+      width: 143px;
+      /* margin: 35px; */
+      margin-top :35px;
+      margin-bottom: 0px;
+      border-radius: 50px;
+      /* padding-inline: 58px; */
+      justify-content: center;
+      align-items: center;
+      vertical-align: center;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .experience-content-box{
+      /* padding-top: 10px; */
+      text-align: center;
+      padding: 15px;
+      padding-bottom: 35px;
+      /* padding-top: 60px; */
+      /* background-color: aliceblue; */
+    }
+    .hero {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding-inline: 20px;
+      text-align: justify;
+    }
+    .heroRight {
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .hero-image {
+      margin-left: 0px;
+      height: 300px;
+      width: 305px;
+    }
+    .name {
+      font-size: 20px;
+    }
+    .project-box {
+      display: flex;
+      flex-direction: column;
+    }
+    .skillbox {
+      padding: 15px;
+    }
+    .skillIcon {
+      height: 65px;
+    }
+  }
+  
