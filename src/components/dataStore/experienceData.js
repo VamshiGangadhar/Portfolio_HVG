@@ -5,7 +5,7 @@ const experienceData = [
     SkillsAcquired: "ReactJS, NodeJS, Graphql",
     Title: "Software Intern",
     Work: "Addressed a range of issues, spanning from minor frontend glitches to critical backend tasks.",
-    img: "/images/drishyaai.png",
+    img: "/images/drishya.png",
   },
   {
     CompanyName: "NIT Warangal",
