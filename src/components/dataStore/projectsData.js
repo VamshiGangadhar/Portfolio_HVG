@@ -14,7 +14,7 @@ const projectsData = [
     description:
       "This project has it's main goal to protect the improper functioning of the DNS, that is should decrease the possibility of attack and redirection to other duplicate websites of the original by getting the correct IP address from the DNS data.",
     githublink: "https://github.com/VamshiGangadhar/Blockchain_DNS",
-    img: "/Images/BDNS.png",
+    img: "/Images/bdns.png",
     languagesUsed: "ReactJs, NodeJS, Hyperledger Fabric, Go-lang",
     title: "Secure DNS using permissioned blockchain ",
     viewproj:
