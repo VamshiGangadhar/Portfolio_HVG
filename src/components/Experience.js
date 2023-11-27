@@ -1,26 +1,27 @@
 import { Box, CssBaseline, Typography } from "@mui/material";
 import React from "react";
 import "./components.css";
-import { collection, getDocs } from "firebase/firestore";
+// import { collection, getDocs } from "firebase/firestore";
 // import { db } from "./firebase";
-import { db } from "../firebase";
-import { useEffect, useState } from "react";
+// import { db } from "../firebase";
+import { useState } from "react";
+import experienceData from "./dataStore/experienceData";
 
 const Experience = () => {
-  const [expes, setExpes] = useState([]);
-  const fetchPost = async () => {
-    await getDocs(collection(db, "experience ")).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setExpes(newData);
-      console.log(expes, newData);
-    });
-  };
-  useEffect(() => {
-    fetchPost();
-  }, []);
+  const [expes] = useState(experienceData);
+  // const fetchPost = async () => {
+  //   await getDocs(collection(db, "experience ")).then((querySnapshot) => {
+  //     const newData = querySnapshot.docs.map((doc) => ({
+  //       ...doc.data(),
+  //       id: doc.id,
+  //     }));
+  //     setExpes(newData);
+  //     console.log(expes, newData);
+  //   });
+  // };
+  // useEffect(() => {
+  //   fetchPost();
+  // }, []);
   return (
     <CssBaseline>
       <Box>
@@ -36,11 +37,9 @@ const Experience = () => {
                 {expe.Title},{expe.CompanyName}
               </Typography>
               <Typography sx={{ color: "#F5F5F5", fontSize: "18px" }}>
-                {/* <b>Duration:</b>  */}
                 {expe.Duration}
               </Typography>
               <Typography sx={{ color: "#F5F5F5", fontSize: "18px" }}>
-                {/* <b>Skills Acquired: </b> */}
                 {expe.SkillsAcquired}
               </Typography>
               <Typography sx={{ color: "#F5F5F5", fontSize: "18px" }}>

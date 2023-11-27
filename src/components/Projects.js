@@ -1,24 +1,24 @@
 import { Button, Typography } from "@mui/material";
 import "./projects.css";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase";
-import { useEffect, useState } from "react";
+// import { collection, getDocs } from "firebase/firestore";
+// import { db } from "../firebase";
+import {  useState } from "react";
+import projectsData from "./dataStore/projectsData";
 
 const Projects = () => {
-  const [projs, setProjs] = useState([]);
-  const fetchPost = async () => {
-    await getDocs(collection(db, "projects")).then((querySnapshot) => {
-      const newData = querySnapshot.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setProjs(newData);
-      console.log(projs, newData);
-    });
-  };
-  useEffect(() => {
-    fetchPost();
-  }, []);
+  const [projs] = useState(projectsData);
+  // useEffect(() => {
+  //   const fetchPost = async () => {
+  //     await getDocs(collection(db, "projects")).then((querySnapshot) => {
+  //       const newData = querySnapshot.docs.map((doc) => ({
+  //         ...doc.data(),
+  //         id: doc.id,
+  //       }));
+  //       setProjs(newData);
+  //     });
+  //   };
+  //   fetchPost();
+  // }, []);
   const ImageCard = ({ item }) => (
     // <div className="whole-project-section">
     <div className="project-individual-box" key={item.alt}>
@@ -34,7 +34,7 @@ const Projects = () => {
         >
           {item.title}
         </Typography>
-        <p className="project-description">{item.description}</p>
+        <p style={{textAlign: "justify", margin: "7px"}} className="project-description">{item.description}</p>
         <p className="project-languages">{item.languagesUsed}</p>
         <div className="project-buttons-box">
           <Button href={item.githublink} sx={{ m: 2 }} variant="contained">
@@ -53,7 +53,7 @@ const Projects = () => {
       <Typography sx={{ m: 2 }} variant="h4" color="lightgoldenrodyellow">
         Projects
       </Typography>
-      <div className="project-complete-box">
+      <div className="project-complete-box" style={{marginLeft: "9%"}}>
         {projs?.map((item) => (
           <ImageCard key={item.alt} item={item} />
         ))}
