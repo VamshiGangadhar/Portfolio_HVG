@@ -7,6 +7,7 @@ const Footer = () => {
       <Typography sx={{ m: 3 }} variant="h4" color="lightgoldenrodyellow">
         Let's Work Together
       </Typography>
+      
       <Button
         href="mailto:vamshi.gangadhar365@gmail.com"
         variant="contained"
@@ -17,7 +18,7 @@ const Footer = () => {
         }}
       >
         <MailIcon />
-        Contact Me
+        vamshi.gangadhar365@gmail.com
       </Button>
     </div>
   );
