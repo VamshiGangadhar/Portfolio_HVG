@@ -9,7 +9,7 @@ const Hero = () => {
     <CssBaseline>
       <Box class="hero">
         <div className="">
-          <img className="hero-image" src="Images/vamshi.png" alt="dp" />
+          <img className="hero-image" src="Images/formal1.jpeg" alt="dp" />
         </div>
         <div className="heroRight">
           <div>
