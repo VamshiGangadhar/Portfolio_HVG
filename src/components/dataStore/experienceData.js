@@ -1,8 +1,17 @@
 const experienceData = [
   {
     CompanyName: "DrishyaAI",
-    Duration: "28-08-2023 to 30-11-2023",
-    SkillsAcquired: "ReactJS, NodeJS, Graphql",
+    Duration: "01-06-2024 to Present",
+    SkillsAcquired:
+      "Python, AWS Lambda, AWS S3, CI/CD, ReactJS, NodeJS, Graphql",
+    Title: "Jr Software Engineer",
+    Work: "Developed AWS Lambda services for data extraction, automation, and 3D model enhancement, while optimizing backend operations and enhancing UI for improved user experience.Gained expertise in CI/CD pipelines, GitHub, and AWS S3 to streamline software deployment.",
+    img: "/Images/drishya.png",
+  },
+  {
+    CompanyName: "DrishyaAI",
+    Duration: "28-08-2023 to 31-05-2024",
+    SkillsAcquired: "ReactJS, NodeJS, Graphql, Python",
     Title: "Software Intern",
     Work: "Addressed a range of issues, spanning from minor frontend glitches to critical backend tasks.",
     img: "/Images/drishya.png",
