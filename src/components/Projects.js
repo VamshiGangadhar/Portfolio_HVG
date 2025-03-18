@@ -18,7 +18,7 @@ const ProjectsSection = () => {
         variant="h4"
         component="div"
         align="center"
-        sx={{ mb: 4, fontWeight: "bold" }}
+        sx={{ mb: 4, fontWeight: "bold", color: "lightgoldenrodyellow" }}
       >
         My Projects
       </Typography>

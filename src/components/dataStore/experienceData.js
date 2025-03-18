@@ -3,7 +3,7 @@ const experienceData = [
     CompanyName: "Drishya AI Labs",
     Duration: "02-05-2024 to Present",
     SkillsAcquired:
-      "Python, AWS Lambda, AWS S3, CI/CD, ReactJS, NodeJS, Graphql",
+      "Python, JavaScript, AWS Lambda, AWS S3, CI/CD, ReactJS, NodeJS, Graphql",
     Title: "Junior Software Engineer",
     Work: "Developed AWS Lambda services for data extraction, automation, and 3D model enhancement, while optimizing backend operations and enhancing UI for improved user experience.Gained expertise in CI/CD pipelines, GitHub, and AWS S3 to streamline software deployment.",
     img: "/Images/drishya.png",
@@ -11,7 +11,7 @@ const experienceData = [
   {
     CompanyName: "Drishya AI Labs",
     Duration: "28-08-2023 to 31-04-2024",
-    SkillsAcquired: "ReactJS, NodeJS, Graphql, Python",
+    SkillsAcquired: "Python, JavaScript, ReactJS, NodeJS, Graphql",
     Title: "Software Intern",
     Work: "Addressed a range of issues, spanning from minor frontend glitches to critical backend tasks.",
     img: "/Images/drishya.png",

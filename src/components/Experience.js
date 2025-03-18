@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { Card, CardContent, Typography, Grid, Chip, Box } from "@mui/material";
 import experienceData from "./dataStore/experienceData";
 
 const ExperienceSection = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+
   return (
     <Box
       sx={{
@@ -15,7 +21,10 @@ const ExperienceSection = () => {
         variant="h4"
         fontWeight="bold"
         gutterBottom
-        sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", color: "lightgoldenrodyellow" } }}
+        sx={{
+          fontSize: { xs: "1.8rem", sm: "2.2rem" },
+          color: "lightgoldenrodyellow",
+        }}
       >
         Work Experience
       </Typography>
@@ -23,24 +32,35 @@ const ExperienceSection = () => {
         variant="subtitle1"
         color="textSecondary"
         gutterBottom
-        sx={{ fontSize: { xs: "0.9rem", sm: "1rem" }, px: { xs: 2, sm: 0 } }}
+        sx={{
+          fontSize: { xs: "0.9rem", sm: "1rem" },
+          px: { xs: 2, sm: 0 },
+          color: "lightgrey",
+        }}
       >
         My journey through various roles and organizations.
       </Typography>
 
-      <Carousel indicators={true} fade>
-        {experienceData.map((exp, index) => (
-          <Carousel.Item key={index}>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        indicators={true}
+        fade
+        controls
+      >
+        {experienceData.map((exp, idx) => (
+          <Carousel.Item key={idx}>
             <Grid container justifyContent="center">
               <Card
                 sx={{
-                  maxWidth: { xs: "90%", sm: 700 },
+                  maxWidth: { xs: "95%", sm: 700 }, // Show a slight edge of next card
                   mt: 3,
                   mb: 3,
                   p: { xs: 2, sm: 3 },
                   borderRadius: 3,
                   boxShadow: 3,
                   backgroundColor: "white",
+                  position: "relative",
                 }}
               >
                 <Grid container spacing={3} alignItems="center">
@@ -121,6 +141,22 @@ const ExperienceSection = () => {
                     </CardContent>
                   </Grid>
                 </Grid>
+
+                {/* Pagination Indicator */}
+                <Typography
+                  variant="caption"
+                  sx={{
+                    position: "absolute",
+                    bottom: 10,
+                    right: 10,
+                    backgroundColor: "rgba(0,0,0,0.6)",
+                    color: "white",
+                    padding: "5px 10px",
+                    borderRadius: 10,
+                  }}
+                >
+                  {idx + 1} / {experienceData.length}
+                </Typography>
               </Card>
             </Grid>
           </Carousel.Item>
