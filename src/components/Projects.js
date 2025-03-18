@@ -1,77 +1,119 @@
 import React from "react";
-import { Card, CardMedia, CardContent, Typography, Button, Chip, Grid } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Button,
+  Chip,
+  Grid,
+  Container,
+} from "@mui/material";
 import projectsData from "./dataStore/projectsData";
 
 const ProjectsSection = () => {
   return (
-    <div className="projects-section">
-      <Typography variant="h4" component="div" gutterBottom align="center" style={{ margin: '30px 0' }}>
+    <Container maxWidth="lg" sx={{ py: 5 }}>
+      <Typography
+        variant="h4"
+        component="div"
+        align="center"
+        sx={{ mb: 4, fontWeight: "bold" }}
+      >
         My Projects
       </Typography>
-      <div style={{ display: 'flex', overflowX: 'auto', padding: '0 10px' }}>
+      <Grid container spacing={3} justifyContent="center">
         {projectsData.map((project, index) => (
-          <div key={index} style={{ flex: '0 0 auto', marginRight: '20px', width: '300px' }}>
-            <Card style={{ height: "100%", display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                borderRadius: 3,
+                boxShadow: 3,
+                transition: "transform 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
+              }}
+            >
               <CardMedia
                 component="img"
                 height="200"
                 image={project.img}
                 alt={project.alt}
               />
-              <CardContent style={{ textAlign: 'center' }}>
-                <Typography variant="h5" component="div" gutterBottom>
+              <CardContent sx={{ textAlign: "center", flexGrow: 1 }}>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  fontWeight="bold"
+                  gutterBottom
+                >
                   {project.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" paragraph>
                   {project.description}
                 </Typography>
-                <Typography variant="body2" style={{ marginTop: 10 }}>
-                  <strong>Languages/Tools Used:</strong>
+                <Typography variant="body2" fontWeight="bold" sx={{ mt: 1 }}>
+                  Technologies Used:
                 </Typography>
-                <div style={{ marginTop: 5, marginBottom: 10 }}>
+                <Grid
+                  container
+                  spacing={1}
+                  justifyContent="center"
+                  sx={{ mt: 1 }}
+                >
                   {project.languagesUsed.split(", ").map((language, idx) => (
-                    <Chip
-                      key={idx}
-                      label={language}
-                      variant="outlined"
-                      style={{ marginRight: 5, marginBottom: 5 }}
-                    />
-                  ))}
-                </div>
-                <Grid container spacing={2} justifyContent="center">
-                  <Grid item>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      href={project.githublink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      size="small"
-                    >
-                      GitHub
-                    </Button>
-                  </Grid>
-                  {project.viewproj && (
-                    <Grid item>
-                      <Button
+                    <Grid item key={idx}>
+                      <Chip
+                        label={language}
                         variant="outlined"
                         color="primary"
-                        href={project.viewproj}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         size="small"
-                      >
-                        Live Demo
-                      </Button>
+                      />
                     </Grid>
-                  )}
+                  ))}
                 </Grid>
               </CardContent>
+              <Grid
+                container
+                spacing={2}
+                justifyContent="center"
+                sx={{ mb: 2 }}
+              >
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    href={project.githublink}
+                    target="_blank"
+                    size="small"
+                  >
+                    GitHub
+                  </Button>
+                </Grid>
+                {project.viewproj && (
+                  <Grid item>
+                    <Button
+                      variant="outlined"
+                      color="secondary"
+                      href={project.viewproj}
+                      target="_blank"
+                      size="small"
+                    >
+                      Live Demo
+                    </Button>
+                  </Grid>
+                )}
+              </Grid>
             </Card>
-          </div>
+          </Grid>
         ))}
-      </div>
-    </div>
+      </Grid>
+    </Container>
   );
 };
 

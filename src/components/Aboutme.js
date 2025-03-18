@@ -11,7 +11,7 @@ const Aboutme = () => {
           <i className="dev">
             <u>Information Technology</u>{" "}
           </i>
-          in JNTU Gurajada Vizianagaram University. I am very enthusiastic in
+          at Drishya AI Labs. I am very enthusiastic in
           designing websites and automating things which gives me atmost
           happiness and holds joy in me all the way of development. I am pretty
           much intrested in working in teams.

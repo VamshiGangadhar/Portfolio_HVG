@@ -1,63 +1,123 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import { Card, CardContent, Typography, Grid, Chip } from "@mui/material";
+import { Card, CardContent, Typography, Grid, Chip, Box } from "@mui/material";
 import experienceData from "./dataStore/experienceData";
 
 const ExperienceSection = () => {
   return (
-    <div className="experience-carousel">
-      <Carousel>
+    <Box
+      sx={{
+        padding: { xs: "40px 10px", sm: "60px 20px" },
+        textAlign: "center",
+      }}
+    >
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        gutterBottom
+        sx={{ fontSize: { xs: "1.8rem", sm: "2.2rem", color: "lightgoldenrodyellow" } }}
+      >
+        Work Experience
+      </Typography>
+      <Typography
+        variant="subtitle1"
+        color="textSecondary"
+        gutterBottom
+        sx={{ fontSize: { xs: "0.9rem", sm: "1rem" }, px: { xs: 2, sm: 0 } }}
+      >
+        My journey through various roles and organizations.
+      </Typography>
+
+      <Carousel indicators={true} fade>
         {experienceData.map((exp, index) => (
           <Carousel.Item key={index}>
             <Grid container justifyContent="center">
               <Card
-                style={{
-                  maxWidth: 600,
-                  marginTop: 20,
-                  marginBottom: 20,
-                  padding: "20px",
-                  backgroundColor: "#f5f5f5",
+                sx={{
+                  maxWidth: { xs: "90%", sm: 700 },
+                  mt: 3,
+                  mb: 3,
+                  p: { xs: 2, sm: 3 },
+                  borderRadius: 3,
+                  boxShadow: 3,
+                  backgroundColor: "white",
                 }}
               >
-                <Grid container spacing={2} alignItems="center">
+                <Grid container spacing={3} alignItems="center">
+                  {/* Image Section */}
                   <Grid item xs={12} sm={4}>
-                    <img
+                    <Box
+                      component="img"
                       src={exp.img}
                       alt={exp.CompanyName}
-                      style={{
+                      sx={{
                         width: "100%",
-                        borderRadius: "8px",
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                        height: "auto",
+                        borderRadius: 2,
+                        boxShadow: 2,
+                        objectFit: "cover",
                       }}
                     />
                   </Grid>
+
+                  {/* Text Content */}
                   <Grid item xs={12} sm={8}>
                     <CardContent>
-                      <Typography variant="h5" component="div" gutterBottom>
+                      <Typography
+                        variant="h5"
+                        fontWeight="bold"
+                        gutterBottom
+                        sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" } }}
+                      >
                         {exp.CompanyName}
                       </Typography>
-                      <Typography variant="subtitle1" color="textSecondary">
+                      <Typography
+                        variant="subtitle2"
+                        color="textSecondary"
+                        sx={{ fontSize: { xs: "0.8rem", sm: "1rem" } }}
+                      >
                         {exp.Duration}
                       </Typography>
-                      <Typography variant="body1" style={{ marginTop: 10 }}>
+                      <Typography
+                        variant="body1"
+                        sx={{ mt: 1, fontSize: { xs: "0.9rem", sm: "1rem" } }}
+                      >
                         <strong>Title:</strong> {exp.Title}
                       </Typography>
-                      <Typography variant="body2" style={{ marginTop: 10 }}>
+                      <Typography
+                        variant="body2"
+                        sx={{ mt: 1, fontSize: { xs: "0.85rem", sm: "1rem" } }}
+                      >
                         <strong>Work:</strong> {exp.Work}
                       </Typography>
-                      <Typography variant="body2" style={{ marginTop: 10 }}>
+
+                      {/* Skills Acquired */}
+                      <Typography variant="body2" sx={{ mt: 2 }}>
                         <strong>Skills Acquired:</strong>
                       </Typography>
-                      <div style={{ marginTop: 5 }}>
+                      <Box
+                        sx={{
+                          mt: 1,
+                          display: "flex",
+                          flexWrap: "wrap",
+                          justifyContent: { xs: "center", sm: "flex-start" },
+                        }}
+                      >
                         {exp.SkillsAcquired.split(", ").map((skill, idx) => (
                           <Chip
                             key={idx}
                             label={skill}
                             variant="outlined"
-                            style={{ marginRight: 5, marginBottom: 5 }}
+                            sx={{
+                              mr: 1,
+                              mb: 1,
+                              backgroundColor: "#e3f2fd",
+                              fontWeight: "bold",
+                              fontSize: { xs: "0.7rem", sm: "0.9rem" },
+                            }}
                           />
                         ))}
-                      </div>
+                      </Box>
                     </CardContent>
                   </Grid>
                 </Grid>
@@ -66,7 +126,7 @@ const ExperienceSection = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-    </div>
+    </Box>
   );
 };
 

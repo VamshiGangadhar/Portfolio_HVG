@@ -18,22 +18,16 @@ const Hero = () => {
               style={{ textAlign: "justify", color: "grey" }}
               className="subname"
             >
-              Hello there I'm Vamshi a{" "}
+              Hello there I'm Vamshi Gangadhar a{" "}
               <i className="dev">
-                <u>Full Stack Web Developer</u>
+                <u>Junior Software Engineer</u>
               </i>
-              , I As a Full-Stack developer and Blockchain developer, I aim to
-              leverage my skills and knowledge to create innovative and
-              cutting-edge solutions that deliver value to businesses and
-              individuals alike. I am passionate about developing efficient and
-              scalable applications that meet the needs of end-users while
-              ensuring a seamless user experience. My goal is to work in an
-              environment that fosters growth, creativity, and collaboration,
-              where I can continue to learn, innovate, and apply my skills to
-              solve complex problems. My goal is to work in an environment that
-              fosters growth, creativity, and collaboration, where I can
-              continue to learn, innovate, and apply my skills to solve complex
-              problems.
+              , at Drishya AI Labs, with a strong foundation in full-stack. I hold
+              a Bachelor's degree in Information Technology from Jawaharlal
+              Nehru Technological University-Gurajada Vizianagaram.My extensive
+              experience with AWS Lambda, GitHub, CI/CD pipelines, Python coding
+              standards, and AWS S3 has equipped me with a comprehensive skill
+              set for tackling complex software engineering challenges.
             </p>
           </div>
           <div>
