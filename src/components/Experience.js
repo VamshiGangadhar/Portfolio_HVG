@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import { Card, CardContent, Typography, Grid, Chip, Box } from "@mui/material";
 import experienceData from "./dataStore/experienceData";
 
 const ExperienceSection = () => {
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % experienceData.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
@@ -53,7 +61,7 @@ const ExperienceSection = () => {
             <Grid container justifyContent="center">
               <Card
                 sx={{
-                  maxWidth: { xs: "95%", sm: 700 }, // Show a slight edge of next card
+                  maxWidth: { xs: "95%", sm: 700 },
                   mt: 3,
                   mb: 3,
                   p: { xs: 2, sm: 3 },
